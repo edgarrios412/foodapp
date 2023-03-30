@@ -1,0 +1,44 @@
+.filter{
+    margin-top: 15vh;
+    margin-left: 7%;
+    background-color: white;
+    width: 83%;
+    height: 11vh;
+    border-radius: 40px;
+    box-shadow: 0px 0px 6px rgb(216, 215, 215);
+    transition: .6s;
+    animation: aparecer .5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px;
+}
+
+.order{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 20px;
+    margin-right: 30px;
+    letter-spacing: 0px;
+    font-size: .9em;
+}
+.by{
+    margin-left: 115px;
+    margin-right: 50px;
+    margin-top: 32px;
+    letter-spacing: 0px;
+    font-size: 1.2em;
+    color: orange;
+}
+
+
+@keyframes aparecer{
+    0%{
+        scale:0;
+        opacity:0
+    }80%{
+        scale:1.05
+    }100%{
+        scale:1;
+        opacity:1;
+    }
+}

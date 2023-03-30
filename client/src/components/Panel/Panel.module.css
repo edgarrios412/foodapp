@@ -1,0 +1,202 @@
+.bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(27, 27, 27);
+}
+
+.stadistics{
+    margin-top: 50px;
+    height: 150px;
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    animation: aparecer .6s ease-in-out
+}
+
+.userCount{
+    height: 100%;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    font-size:5em;
+    color:rgb(0, 0, 0)
+}
+
+.userOnCount{
+    margin-left: 50px;
+    height: 100%;
+    width: 250px;
+    background: rgb(113,0,204);
+    background: linear-gradient(144deg, rgba(113,0,204,1) 19%, rgba(197,16,237,1) 80%);
+    border-radius: 20px;
+    text-align: center;
+    font-size:5em;
+    color:white
+}
+
+.text{
+    font-size:.2em;
+    font-weight: 600;
+}
+
+.recipeCount{
+    height: 100%;
+    width: 250px;
+    background: rgb(113,0,204);
+    background: linear-gradient(144deg, rgba(113,0,204,1) 19%, rgba(197,16,237,1) 80%);
+    border-radius: 20px;
+}
+
+.nav{
+    position: fixed;
+    background-color: rgb(56, 56, 56);
+    height: 100%;
+    width: 10%;
+}
+
+.usersBanCount{
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-size:5em;
+    color:rgb(0, 0, 0)
+}
+
+.logContainer{
+    height: 400px;
+    width: 530px;
+    margin-left: 185px;
+    margin-top:30px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    animation: aparecer .7s ease-in-out
+}
+
+.logs{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 300px;
+    width:430px;
+    overflow-y: auto;
+}
+
+.log{
+    border: 2px solid rgb(113,0,204);
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.loguser{
+    font-weight: 600;
+}
+
+.logaction{
+    font-size:.9em;
+}
+
+.ban{
+    height: 185px;
+    width: 530px;
+    margin-left: 750px;
+    margin-top:-400px;
+    background-color: rgb(255, 255, 255);
+    outline: 3px solid #7100cc;
+    border-radius: 20px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    animation: aparecer .8s ease-in-out
+}
+
+.alert{
+    height: 185px;
+    width: 530px;
+    margin-left: 750px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    animation: aparecer .9s ease-in-out
+}
+
+.icon{
+    position: absolute;
+    height: 60px;
+    margin-left:-250px;
+    margin-top:10px
+}
+
+.desc{
+    margin:0;
+    margin-top: 15px;
+    font-size:2em
+}
+
+.sms{
+    position: absolute;
+    height: 20px;
+    width: 320px;
+    margin-left: -170px;
+    margin-top:10px;
+    border: 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+.sms:focus{
+    outline: 0;
+}
+.id{
+    position: absolute;
+    height: 20px;
+    width: 320px;
+    margin-left: -170px;
+    border: 0;
+    margin-top:40px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.id:focus{
+    outline: 0;
+}
+
+.button{
+    position: absolute;
+    height: 30px;
+    width: 230px;
+    margin-left: -120px;
+    margin-top:80px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: rgb(113,0,204);
+    border: 2px solid rgb(113,0,204);
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.button:hover{
+    background-color: rgb(113,0,204);
+    color:white;
+}
+
+@keyframes aparecer{
+    0%{
+        scale:0;
+        opacity:0
+    }80%{
+        scale:1.05
+    }100%{
+        scale:1;
+        opacity:1;
+    }
+}

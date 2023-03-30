@@ -1,0 +1,62 @@
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 340px;
+    margin: 5px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px rgb(199, 198, 198);
+}
+
+.commentContainer{
+    height: 80%;
+    width: 90%;
+    margin: 5%;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.commentContainer::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.commentContainer::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}
+
+.commentContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comment{
+    padding:10px 0px;
+    margin: 10px;
+    height: 40px;
+}
+
+.img{
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
+.name{
+    margin: -55px 55px;
+    font-size: 1em;
+}
+
+.text{
+    color: rgb(88, 88, 88);
+    margin: 55px 0px 0px 55px;
+    font-size: .8em;
+}
+
+.input{
+    margin-top: 0px;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 4px 30px;
+    border: 0;
+    font-size: 1.2em;
+}

@@ -1,0 +1,61 @@
+.banner{
+    border-radius: 30px;
+    margin-top: 100px;
+    height: 12vh;
+    margin-left: 20px;
+    width:320px;
+    background-color: rgb(21, 21, 21);
+    animation: aparecer .5s ease-in-out;
+    transition: .6s;
+    cursor: pointer;
+}
+
+
+.banner:hover .title{
+    transform: translateX(12px)
+}
+
+.banner:hover .title1{
+    transform: translateX(-12px)
+}
+.banner:hover .iconstart{
+    margin-left: 230px
+}
+
+.title{
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-left: 46px;
+    opacity: 0;
+    animation: aparecer .5s .3s  ease-in-out forwards;
+}
+
+.title1{
+    margin-left: 70px;
+    margin-top: 15px;
+    position: absolute;
+    color: rgb(255, 136, 0);
+    font-size: 3em;
+    opacity: 0;
+    animation: aparecer .5s .5s ease-in-out forwards;
+}
+
+.iconstart{
+    width: 70px;
+    margin: 10px 320px;
+}
+
+
+@keyframes aparecer{
+    0%{
+        scale:0;
+        opacity:0
+    }80%{
+        scale:1.05
+    }100%{
+        scale:1;
+        opacity:1;
+    }
+}

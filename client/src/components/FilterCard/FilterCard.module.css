@@ -1,0 +1,33 @@
+.cardFilter{
+    margin: 0px ;
+    height: 100%;
+    width: 60px;
+    border-radius: 0px;
+    cursor:pointer;
+    padding: 8px;
+}
+
+/* .cardFilter:nth-child(10){
+    margin-left: 200px;
+} */
+
+.cardFilter:hover{
+    background-color: rgb(255, 221, 29);
+}
+
+.icon{
+    width: 35px;
+    padding: 2px 12px 20px;
+    z-index: 3;
+}
+
+.texticon{
+    /* position: absolute; */
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 0px;
+    width: 60px;
+    font-size: .7em;
+    color: black;
+    z-index: 4;
+}

@@ -1,0 +1,64 @@
+.bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(245, 245, 245);
+}
+
+.titles{
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    margin: 0px 0px 0px 41%;
+}
+
+.title{
+    margin-top: 90px;
+    position: absolute;
+    color: rgb(255, 136, 0);
+    font-size: 5em;
+    opacity:0;
+    animation: aparecer .6s ease-in-out forwards
+}
+
+.title1{
+    margin-left: 20px;
+    margin-top: 150px;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 4.8em;
+    opacity:0;
+    animation: aparecer .6s .2s ease-in-out forwards
+}
+
+.container{
+    text-align: center;
+    margin-top: 300px;
+    animation: aparecer .4s ease-in-out
+}
+
+.input{
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.input:focus{
+    outline:0;
+}
+
+@keyframes aparecer{
+    0%{
+        scale:0;
+        opacity:0
+    }80%{
+        scale:1.05
+    }100%{
+        scale:1;
+        opacity:1;
+    }
+}

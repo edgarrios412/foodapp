@@ -1,0 +1,93 @@
+.card{
+    position: absolute;
+    /* height: 190px;
+    width: 240px; */
+    height: 110px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: visible;
+    transition: .3s;
+    opacity: 0;
+    animation: aparecer .5s .4s ease-in-out forwards;
+    cursor:pointer;
+}
+
+.link{
+    text-decoration: none;
+    height: 110px;
+    width: 170px;
+    margin-top: 20px;
+}
+
+/* .card:hover{
+    transform: scale(1.02,1.02);
+    box-shadow: 1px 1px 10px orange;
+}
+
+.card:hover .title{
+    color: orange;
+    text-shadow: 1px 1px 2px rgb(53, 53, 53);
+} */
+
+.title{
+    position: absolute;
+    font-size: .9em;
+    cursor:pointer;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    height: 90px;
+    width: 180px;
+    opacity:0;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding-top: 20px;
+    border-radius: 30px;
+    transition: .3;
+}
+
+.health{
+    position: absolute;
+    font-size: .8em;
+    margin-top: 93px;
+    margin-left: 85px;
+    color:rgb(0, 0, 0);
+    height: 30px;
+    width: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    transition: .3s
+}
+.icon{
+    margin-left: 83px;
+    margin-top:90px;
+    position: absolute;
+    height: 35px;
+    opacity:0;
+    transition: .3s
+}
+
+
+.img{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 130px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgb(199, 198, 198);
+    transition: 0.3s
+}
+
+@keyframes aparecer{
+    0%{
+        scale:0;
+        opacity:0
+    }80%{
+        scale:1.05
+    }100%{
+        scale:1;
+        opacity:1;
+    }
+}

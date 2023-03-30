@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    margin-top: -65px;
+    width: fit-content;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 45px;
+    display: flex;
+    gap:15px;
+}
+
+.page{
+    cursor:pointer;
+    font-size: 1.2em;
+    text-align: center;
+    border: 2px solid orange;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius:50%;
+}
+
+.pageSelected{
+    cursor:pointer;
+    font-size: 1.2em;
+    text-align: center;
+    border: 2px solid orange;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius:50%;
+    background-color: orange;
+}
