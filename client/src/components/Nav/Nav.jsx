@@ -1,5 +1,5 @@
 import style from "./Nav.module.css"
-import {Link, useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 import SearchBar from "../SearchBar/SearchBar"
 import { useDispatch } from "react-redux";
 import { setLogged } from "../../redux/actions";

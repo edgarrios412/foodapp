@@ -25,7 +25,7 @@ const Crear = () => {
   const diets = useSelector((store) => store.diets);
 
   useEffect(() => {
-    if (isLogged) {
+    if (!isLogged) {
       navigate("/login");
     }// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

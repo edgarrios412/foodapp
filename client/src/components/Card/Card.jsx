@@ -28,7 +28,7 @@ const Card = ({recipe}) => {
       </h3>
       <img ref={imgRef} className={style.img} src={recipe.image} alt="recipe"></img>
     </div>
-      <img ref={iconRef} className={style.icon} src="./img/icons/heart.png"/><h1 ref={textRef} className={style.health}>{recipe.healthScore}</h1>
+      <img alt="img" ref={iconRef} className={style.icon} src="./img/icons/heart.png"/><h1 ref={textRef} className={style.health}>{recipe.healthScore}</h1>
     </Link>
     </>
   );

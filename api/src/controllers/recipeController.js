@@ -1,7 +1,6 @@
 const axios = require("axios");
 const { Op } = require("sequelize");
 const { Recipe, Diet } = require("../db");
-const db = require("./database");
 
 module.exports = {
   getRecipes: async (n) => {
@@ -23,6 +22,7 @@ module.exports = {
     const dataArr = new Set(diets);
     const result = [...dataArr]
     const dietas = await Diet.findAll()
+    console.log(dietas)
     if(!dietas.length){
       for (let i = 0; i < result.length; i++) {
         const x = await Diet.create({name:result[i]})

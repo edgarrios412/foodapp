@@ -64,8 +64,8 @@ const Pin = () => {
             n2Ref.current.style.borderColor = "red";
             n3Ref.current.style.borderColor = "red";
             n4Ref.current.style.borderColor = "red";
-          }
-        }
+          }break;
+        }default:{break;}
       }
     }
   };

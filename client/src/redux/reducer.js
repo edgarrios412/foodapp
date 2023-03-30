@@ -6,10 +6,12 @@ import {
     PAGINATION,
     ORDER_BY,
     SET_PAGE,
-    SET_LOGGED
+    SET_LOGGED,
+    USER_LOGGED,
   } from "./actions";
   
   const initialState = {
+    user:{},
     recipes: [],
     filterRecipes: [],
     orderRecipes: [],
@@ -26,6 +28,12 @@ import {
   
   const reducer = (state = initialState, {type,payload}) => {
     switch (type) {
+      case USER_LOGGED:{
+        return{
+          ...state,
+          user: {...payload}
+        }
+      }
       case GET_RECIPES: {
         return {
           ...state,
@@ -59,7 +67,7 @@ import {
         }
       }
       case FILTER_RECIPES: {
-        if(payload == "all"){
+        if(payload === "all"){
           return {
             ...state,
             filterRecipes: [...state.recipes],
@@ -81,7 +89,7 @@ import {
       case ORDER_BY:{
         switch(payload){
         case "abc":{
-        if(state.order == "asc"){
+        if(state.order === "asc"){
         return{
           ...state,
           filterRecipes: state.filterRecipes.sort((x, y) => x.title.localeCompare(y.title)),
@@ -97,7 +105,7 @@ import {
         }
         case "health":{
           console.log(state.filterRecipes)
-          if(state.health == "mayor"){
+          if(state.health === "mayor"){
             return{
               ...state,
               filterRecipes: state.filterRecipes.sort((x, y) => x.healthScore - y.healthScore),
@@ -112,7 +120,7 @@ import {
             }
           }
         case "created":{
-          if(state.created == "user"){
+          if(state.created === "user"){
             return{
               ...state,
               filterRecipes: state.filterRecipes.sort((x, y) => x.created.localeCompare(y.created)),
@@ -126,12 +134,14 @@ import {
               }
             }
         }
-      }
+        default:{break;}
+      }break;
     }
-      default:
+      default:{
         return {
           ...state,
         };
+      }
     }
   };
   

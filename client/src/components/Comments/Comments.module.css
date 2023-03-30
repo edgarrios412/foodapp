@@ -13,6 +13,7 @@
     margin: 5%;
     background-color: white;
     overflow-y: scroll;
+    scroll-behavior: auto;
 }
 
 .commentContainer::-webkit-scrollbar-thumb {
@@ -35,9 +36,13 @@
 }
 
 .img{
+    display: grid;
+    place-items: center;
     height: 50px;
     width:50px;
     border-radius: 50%;
+    font-size: 1.7em;
+    color: white;
     background-color: blueviolet;
 }
 

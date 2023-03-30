@@ -1,7 +1,7 @@
 import style from './SearchBar.module.css';
-import {useDispatch, useSelector} from "react-redux"
+import {useDispatch} from "react-redux"
 import { findRecipe, paginationRecipes, setPage } from '../../redux/actions';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import {useLocation, useNavigate} from "react-router-dom"
 
 export default function SearchBar(props) {
@@ -9,7 +9,6 @@ export default function SearchBar(props) {
    const dispatch = useDispatch()
    const navigate = useNavigate()
    const inputRef = useRef()
-   const pagination = useSelector(store => store.pagination)
    const find = () => {
       dispatch(findRecipe(inputRef.current.value))
       if(pathname !== "/recipe"){

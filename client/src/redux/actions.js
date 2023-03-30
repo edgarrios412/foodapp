@@ -8,6 +8,14 @@ export const PAGINATION = "PAGINATION";
 export const ORDER_BY = "ORDER_BY";
 export const SET_PAGE = "SET_PAGE";
 export const SET_LOGGED = "SET_LOGGED";
+export const USER_LOGGED = "USER_LOGGED";
+
+
+export const userLogged = ({id, name, username}) => {
+    return (dispatch) => {
+        dispatch({ type: USER_LOGGED, payload: {id, name, username}})
+    }
+}
 
 export const setPage = (page) => {
     return (dispatch) => {

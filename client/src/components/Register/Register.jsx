@@ -106,7 +106,7 @@ const Register = () => {
             setStep(step + 1);
             break;
           }
-          case 5: {
+          default: {
           }
         }
         barRef.current.style.width = step * 100 + "px";
@@ -123,7 +123,7 @@ const Register = () => {
         <h3 className={style.title1}>you account</h3>
       </div>
       <div ref={formRef} className={style.container}>
-        {step == 1 && (
+        {step === 1 && (
           <div className={style.form}>
             <h3 className={style.desc}>Name</h3>
             <input
@@ -138,7 +138,7 @@ const Register = () => {
             </button>
           </div>
         )}
-        {step == 2 && (
+        {step === 2 && (
           <div className={style.form}>
             <h3 className={style.desc}>Email</h3>
             <input
@@ -153,7 +153,7 @@ const Register = () => {
             </button>
           </div>
         )}
-        {step == 3 && (
+        {step === 3 && (
           <div className={style.form}>
             <h3 className={style.desc}>Username</h3>
             <input
@@ -168,7 +168,7 @@ const Register = () => {
             </button>
           </div>
         )}
-        {step == 4 && (
+        {step === 4 && (
           <div className={style.form}>
             <h3 className={style.desc}>Password</h3>
             <input
@@ -181,6 +181,7 @@ const Register = () => {
               ref={passRef}
             ></input>
             <img
+              alt="img"
               ref={imgRef}
               onClick={fn}
               className={style.ojo}
@@ -191,7 +192,7 @@ const Register = () => {
             </button>
           </div>
         )}
-        {step == 5 && (
+        {step === 5 && (
           <div className={style.form}>
             <h3 className={style.desc}>Confirm</h3>
             <input
@@ -204,6 +205,7 @@ const Register = () => {
               ref={passRef}
             ></input>
             <img
+              alt="img"
               ref={imgRef}
               onClick={fn}
               className={style.ojo}
@@ -220,7 +222,7 @@ const Register = () => {
         )}
           <div className={style.login} onClick={() => ocultar(0,500)}>Ya tengo cuenta</div>
       </div>
-      {step == 6 && (
+      {step === 6 && (
         <>
           <div className={style.containerCheck}></div>
           <div className={style.check}>

@@ -9,23 +9,23 @@ const Home = () => {
   const isLogged = useSelector(store => store.isLogged)
   const dispatch = useDispatch()
   useEffect(() => {
-    if(isLogged){
+    if(!isLogged){
         navigate("/login")
     }
-    dispatch(getRecipes())
+    dispatch(getRecipes())// eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (
     <div className={style.ligth}>
       <div className={style.container}></div>
-      <img className={style.food} src="./img/food.png" />
+      <img alt="img" className={style.food} src="./img/food.png" />
       {/* <h4 className={style.welcome}>Welcome Edgar!</h4> */}
       <h4 className={style.title}>EAT <span className={style.now}>NOW</span></h4>
       <h4 className={style.desc}>
       Find and discover recipes from all over the world created by people like you and interact with little chefs from all over the world
       </h4>
-      <img className={style.gplay} src="./img/icons/gplay.png"/>
-      <img className={style.astore} src="./img/icons/astore.png"/>
+      <img alt="img" className={style.gplay} src="./img/icons/gplay.png"/>
+      <img alt="img" className={style.astore} src="./img/icons/astore.png"/>
     </div>
   );
 };

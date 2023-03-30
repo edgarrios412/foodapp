@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./Login.module.css";
 import axios from "axios"
 import { useDispatch } from "react-redux";
-import { setLogged } from "../../redux/actions";
+import { setLogged, userLogged } from "../../redux/actions";
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -51,7 +51,9 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault()
     const {data} = await axios.post("http://localhost:3001/user/exist", form)
-    if(data.username == form.username && form.password == data.password){
+    console.log(data)
+    if(data.username === form.username && form.password === data.password){
+    dispatch(userLogged(data))
     dispatch(setLogged(true))
     navigate("/home");
     } else{
@@ -90,6 +92,7 @@ const Login = () => {
               ref={passRef}
             ></input>
             <img
+              alt="img"
               ref={imgRef}
               onClick={fn}
               className={style.ojo}
@@ -99,7 +102,7 @@ const Login = () => {
               Login
             </button>
             <div className={style.loginwith}>
-              <img src="./img/icons/google.png" className={style.google}></img>
+              <img alt="img" src="./img/icons/google.png" className={style.google}></img>
               <span className={style.texto}>Sign in with Google</span>
             </div>
             <div className={style.registro}>¿Aun no tienes cuenta?</div>

@@ -2,7 +2,7 @@ const validation = (recipe) => {
   const errors = {};
 
   const imgRegexp =
-    /^https?:\/\/(?:[a-z\-]+\.)+[a-z]{2,6}(?:\/[^\/#?]+)+\.(?:jpe?g|gif|png)$/i;
+    /^https?:\/\/(?:[a-z-]+\.)+[a-z]{2,6}(?:\/[^/#?]+)+\.(?:jpe?g|gif|png)$/i
 
   // VALIDANDO TITULO
   if (!recipe.title) {

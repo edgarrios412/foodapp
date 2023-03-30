@@ -22,6 +22,7 @@ const Panel = () => {
         </div>
         <div className={style.logContainer}>
           <img
+            alt="img"
             className={style.icon}
             src={`${process.env.PUBLIC_URL}/img/icons/log.png`}
           />
@@ -43,6 +44,7 @@ const Panel = () => {
         </div>
         <div className={style.ban}>
           <img
+            alt="img"
             className={style.icon}
             src={`${process.env.PUBLIC_URL}/img/icons/veredict.png`}
           />
@@ -55,6 +57,7 @@ const Panel = () => {
         </div>
         <div className={style.alert}>
           <img
+            alt="img"
             className={style.icon}
             src={`${process.env.PUBLIC_URL}/img/icons/notification.png`}
           />

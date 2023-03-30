@@ -1,11 +1,9 @@
 import style from "./Filter.module.css";
 import FilterCard from "../FilterCard/FilterCard";
-import SearchBar from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
 import { filterRecipes, orderBy, paginationRecipes, setPage } from "../../redux/actions";
-import { useState } from "react";
 
-const Filter = ({page}) => {
+const Filter = () => {
   const dispatch = useDispatch()
   const diets = useSelector(store => store.diets)
   const fn = (e) => {
@@ -23,8 +21,8 @@ const Filter = ({page}) => {
       <FilterCard src="all.png" names="all" text="all" fn={fn}/>
       {
         diets.map(diet => {
-          if(diet == "lacto ovo vegetarian") return
-          if(diet == "fodmap friendly") return
+          if(diet === "lacto ovo vegetarian") return ""
+          if(diet === "fodmap friendly") return ""
           return(
             <FilterCard src={`${diet}.png`} text={diet} names={diet} fn={fn}/>
           )

@@ -1,14 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import style from "./Recipes.module.css";
-import axios from "axios";
 import Filter from "../Filter/Filter";
-import Trending from "../Trending/Trending";
-import Banner from "../Banner/Banner";
 import Cards from "../Cards/Cards";
-import Window from "../Window/Window";
 import Pagination from "../Pagination/Pagination"
-import { useNavigate, useParams } from "react-router-dom";
-import { getRecipes, setPage } from "../../redux/actions";
+import { useNavigate} from "react-router-dom";
+import { getRecipes} from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Recipes = () => {
@@ -19,10 +15,10 @@ const Recipes = () => {
   const isLogged = useSelector(store => store.isLogged)
   
   useEffect(() => { 
-    if(isLogged){
+    if(!isLogged){
       navigate("/login")
     }
-    if(!pagesFilter) dispatch(getRecipes())
+    if(!pagesFilter) dispatch(getRecipes())// eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (
