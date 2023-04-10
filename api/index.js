@@ -21,8 +21,8 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+conn.sync({ alter: true }).then(() => {
+  server.listen(process.env.DB_PORT, () => {
+    console.log('%s listening at '+ process.env.DB_PORT); // eslint-disable-line no-console
   });
 });

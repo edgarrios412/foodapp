@@ -9,6 +9,7 @@ export const ORDER_BY = "ORDER_BY";
 export const SET_PAGE = "SET_PAGE";
 export const SET_LOGGED = "SET_LOGGED";
 export const USER_LOGGED = "USER_LOGGED";
+export const FILTER_RECIPES_ING = "FILTER_RECIPES_ING";
 
 
 export const userLogged = ({id, name, username}) => {
@@ -42,17 +43,16 @@ export const getDiets = () => {
     }
 }
 
-// export const getRecipe = (id) => {
-//     return (dispatch) => {
-//         fetch(`http://localhost:3001/character/${id}`)
-//         .then(res => res.json())
-//         .then(data => dispatch({ type: GET_CHARACTER, payload: data}))
-//     }
-// }
 
 export const filterRecipes = (filter) => {
     return (dispatch) => {
        dispatch({type: FILTER_RECIPES, payload: filter})
+    }
+}
+
+export const filterRecipesByIng = (filter) => {
+    return (dispatch) => {
+       dispatch({type: FILTER_RECIPES_ING, payload: filter})
     }
 }
 

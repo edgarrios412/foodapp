@@ -34,7 +34,8 @@
 .container{
     text-align: center;
     margin-top: 300px;
-    animation: aparecer .4s ease-in-out
+    animation: aparecer .4s ease-in-out;
+    transition: .3s;
 }
 
 .input{
@@ -45,6 +46,7 @@
     border-radius: 10px;
     text-align: center;
     font-size: 3em;
+    transition: .3s
 }
 
 .input:focus{

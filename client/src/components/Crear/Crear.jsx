@@ -36,7 +36,6 @@ const Crear = () => {
       return setRecipe({ ...recipe, diets: newArr });
     }
     setRecipe({ ...recipe, diets: [...recipe.diets, e.target.name] });
-    console.log(recipe);
   };
 
   const handleInput = (e) => {

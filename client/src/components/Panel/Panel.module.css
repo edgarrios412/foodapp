@@ -1,6 +1,7 @@
 .bg{
     height: 100%;
-    width: 100%;
+    width: 103%;
+    margin-left: -3%;
     position: absolute;
     /* background-color: rgb(245, 245, 245); */
     background-color: rgb(27, 27, 27);

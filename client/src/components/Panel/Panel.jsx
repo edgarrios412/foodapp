@@ -1,23 +1,33 @@
 import style from "./Panel.module.css";
+import axios from "axios"
+import { useEffect, useState } from "react";
 
 const Panel = () => {
+
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/user/all")
+    .then(data => setUsers(data.data))
+  })
+
   return (
     <>
       <div className={style.bg}>
-        <nav className={style.nav}></nav>
+        {/* <nav className={style.nav}></nav> */}
         <div className={style.stadistics}>
           <div className={style.userOnCount}>
-            1<div className={style.text}>ONLINE USERS</div>
+            0<div className={style.text}>ONLINE USERS</div>
           </div>
           <div className={style.userCount}>
-            34
+            {users.length}
             <div className={style.text}>USERS CREATED</div>
           </div>
           <div className={style.usersBanCount}>
-            3<div className={style.text}>USERS BANNED</div>
+            0<div className={style.text}>USERS BANNED</div>
           </div>
           <div className={style.usersBanCount}>
-            8<div className={style.text}>TICKETS OPEN</div>
+            0<div className={style.text}>TICKETS OPEN</div>
           </div>
         </div>
         <div className={style.logContainer}>

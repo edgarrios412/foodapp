@@ -30,7 +30,7 @@ const Comments = ({id}) => {
           c.map(e => {
             return(
             <div className={style.comment}>
-            <div className={style.img}>E</div>
+            <div className={style.img}>{e.user[0].toUpperCase()}</div>
             <div className={style.name}>{e.user}</div>
             <div className={style.text}>{e.text}</div>
         </div>

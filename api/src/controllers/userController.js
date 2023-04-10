@@ -8,5 +8,9 @@ module.exports = {
     getUserByUsername: async (username,password) => {
         const findUser = await User.findOne({ where:{username,password}})
         return findUser;
+    },
+    getUsers: async () => {
+        const getUsers = await User.findAll()
+        return getUsers
     }
 }

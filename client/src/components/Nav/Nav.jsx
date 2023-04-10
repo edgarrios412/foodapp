@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { setLogged } from "../../redux/actions";
 
 const Nav = () => {
+  // const navigate = useNavigate()
   const dispatch = useDispatch()
   const logout = () => {
     dispatch(setLogged(false))

@@ -2,6 +2,7 @@ import {
     GET_RECIPES,
     GET_DIETS,
     FILTER_RECIPES,
+    FILTER_RECIPES_ING,
     FIND_RECIPES,
     PAGINATION,
     ORDER_BY,
@@ -28,6 +29,12 @@ import {
   
   const reducer = (state = initialState, {type,payload}) => {
     switch (type) {
+      case FILTER_RECIPES_ING: {
+        return{
+          ...state,
+          filterRecipes: state.recipes.filter(r => )
+        }
+      }
       case USER_LOGGED:{
         return{
           ...state,

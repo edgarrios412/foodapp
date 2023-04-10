@@ -51,7 +51,6 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault()
     const {data} = await axios.post("http://localhost:3001/user/exist", form)
-    console.log(data)
     if(data.username === form.username && form.password === data.password){
     dispatch(userLogged(data))
     dispatch(setLogged(true))

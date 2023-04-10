@@ -4,7 +4,7 @@ const { Recipe, Diet } = require("../db");
 
 module.exports = {
   getRecipes: async (n) => {
-    const API = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=80&addRecipeInformation=true&apiKey=${process.env.API_KEY}`)
+    const API = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=2&addRecipeInformation=true&apiKey=${process.env.API_KEY}`)
     const recipeAPI = []
     let diets = []
     API.data.results.map(r => {
@@ -15,6 +15,7 @@ module.exports = {
         image: r.image,
         diets: r.diets,
         created: "api",
+        steps: r.analyzedInstructions[0].steps.length
       }
       diets = [...diets, ...obj.diets]
       recipeAPI.push(obj)
@@ -22,7 +23,6 @@ module.exports = {
     const dataArr = new Set(diets);
     const result = [...dataArr]
     const dietas = await Diet.findAll()
-    console.log(dietas)
     if(!dietas.length){
       for (let i = 0; i < result.length; i++) {
         const x = await Diet.create({name:result[i]})

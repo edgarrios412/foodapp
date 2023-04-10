@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import style from "./Index.module.css";
 
 const Index = () => {
-  // const [dark, setDark] = useState(false);
   const darkRef = useRef();
   const ligthRef = useRef();
   const imgRef = useRef();
